@@ -1,0 +1,11 @@
+# Django
+django_extensions==1.7.9
+django-model-utils==3.1.1
+django-post-office==3.1.0
+
+# Postgresql
+psycopg2==2.7.5
+redis==2.10.6
+requests==2.19.1
+pygithub==1.40
+python-dateutil==2.7.3

@@ -1,4 +1,5 @@
 # Django
+django==1.11.16
 django_extensions==1.7.9
 django-model-utils==3.1.1
 django-post-office==3.1.0

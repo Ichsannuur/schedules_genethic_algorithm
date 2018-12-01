@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block action %} {{action}} {% endblock action %}
+{% block content %}
+    <body>
+        <div class="p-20">
+            <form method="post" data-parsley-validate novalidate>
+                {% csrf_token %}
+                <div class="padding">
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>    
+                    {% endfor %}
+                </div>
+                {% for field in form.visible_fields %}   
+                <div class="form-group col-sm-6">
+                    <label for="userName">{{ field.label }}<span class="text-danger">*</span></label>
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+                {% endfor %}
+                <div class="col-sm-12">
+                    <button class="btn btn-success btn-rounded" type="submit"><i class="fa fa-floppy-o m-r-5"></i>Save</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+{% endblock content %}
